@@ -1,0 +1,441 @@
+* {
+    box-sizing: border-box;
+}
+
+body, html{
+    background-color: rgb(174, 182, 191);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: 'Libre Baskerville', serif;
+    overflow-y: auto;
+}
+
+.container{
+    max-height: 100vh; /* Altura máxima de la sección */
+    overflow-y: auto; /* Barra de desplazamiento vertical solo si el contenido excede la altura máxima */
+}
+
+/* HEADER */
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed; /* Hace que el encabezado se comporte de manera relativa hasta que alcance la parte superior de la ventana del navegador. */
+    background-image: url('img/carrusel-img.jpg'); /* Reemplaza 'ruta-de-tu-imagen.jpg' con la ruta correcta de tu imagen */
+    background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el encabezado */
+    background-position: center; /* Centra la imagen */
+    height: 5px;  /* Ajusta la altura del encabezado según tus necesidades */
+    padding: 25px; /* Añade espacio interno al encabezado para que el contenido no se superponga con la imagen de fondo */
+    opacity: 0.8;
+    width: 100%;
+    }
+
+li{
+    list-style-type: none;
+}
+
+#menu{
+    display: flex;
+    justify-content: flex-end; 
+    gap: 1.1em;
+    margin-right: 0;
+}
+
+header nav {
+    flex: 1; /* Ajusta el ancho del nav para que sea flexible */
+    margin-left: auto;
+}
+
+header nav ul a{
+    color:rgb(255, 253, 253);
+    text-decoration: none
+}
+
+
+header a i{
+    color: antiquewhite;
+    font-size: 20px;
+    padding: 0.5;
+}
+
+main nav ul{
+    display: flex;
+    justify-content: flex-end;
+    gap: 1.1em;
+}
+
+footer{
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgb(28, 40, 51); 
+    color: white; 
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+}
+
+.acerca-imagen{
+    padding: 40px;
+    width: 1250px;
+}
+
+.acerca-imagen img{
+    border-radius: 30px;  
+}
+
+.acerca-de{ 
+    padding: 40px;
+}
+
+#seccion-1{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(213, 216, 220);
+    width: 100%;
+    text-align: justify;
+    padding: 100px;
+}
+
+.acerca-de p{
+    width: 70%;
+    margin-bottom: 20px;
+}
+
+#seccion-2 img{
+    width: 200px;
+    margin: 50px;
+}
+
+#seccion-2{
+    background-color: rgb(128, 139, 150);
+    padding-bottom: 80px;
+    padding: 100px;   
+}
+
+#seccion-3{
+    background-color: rgb(93, 109, 126);
+    padding: 100px; 
+    width: 100%;
+}
+
+#seccion-3 img{
+    width: 400px;
+}
+
+.trabajos {
+    display: flex;
+    justify-content: center;
+}
+
+.redes ul{
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: right;
+}
+
+.abrir_menu,
+.cerrar_menu{
+    display: none;
+}
+
+.servicios{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 80px; 
+    width: 100%;
+}
+
+.servicio1,
+.servicio2,
+.servicio3,
+.servicio4 {
+    width: 48%; 
+    margin-bottom: 30px; 
+    text-align: justify;
+}
+
+
+/* FORMULARIO */
+
+#seccion-4{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .form-header {
+    text-align: center;
+    background-color: #f6f7f8;
+    border: 1px solid #d6d9dc;
+    border-radius: 3px;
+  
+    width: 80%;
+    margin: 10px auto;
+    padding: 50px;
+  }
+  
+  .form-header h1 {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f6f7f8;
+    border: 1px solid #d6d9dc;
+    border-radius: 3px;
+  
+    width: 80%;
+    padding: 50px;
+    margin: 30px 0 40px 0;
+  }
+
+  .form-row textarea {
+    font-family: "Helvetica", "Arial", sans-serif;
+    font-size: 14px;
+  
+  
+    background-color: #bdbdbd;
+    border: 0;
+    border-radius: 6px;
+  
+  
+    min-height: 200px;
+    margin-bottom: 10px;
+    padding: 7px;
+    resize: none;
+  
+  
+    width: 100%;
+  }
+  /* ------------- Para Pantallas de más de 700px ------------- */
+  
+  
+ .form-row textarea {
+      width: 250px;
+    }
+
+/* ------------- Campos del Formulario ------------- */
+
+.form-row {
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  
+.form-row input[type="text"],
+.form-row input[type="email"],
+.form-row input[type="mensaje"]{
+    background-color: #bdbdbd;
+    border: 0;
+    border-radius: 6px;
+    width: 100%;
+    padding: 7px;
+    font-size: 14px;
+    max-width: 200px;
+  }
+  
+  .form-row label {
+    margin-bottom: 3px;
+    text-align: initial;
+  }
+
+  .form-row button {
+    font-size: 16px;
+    font-weight: bold;
+  
+  
+    color: #ffffff;
+    background-color: #5995da;
+  
+  
+    border: none;
+    border-radius: 3px;
+  
+  
+    padding: 10px 40px;
+    cursor: pointer;
+  }
+  
+  
+  .form-row button:hover {
+    background-color: #76aeed;
+  }
+  
+  
+  .form-row button:active {
+    background-color: #407fc7;
+  }
+  
+  
+  /* ------------- Para Pantallas de más de 700px ------------- */
+  
+  
+  .form-row button {
+      margin-left: 120px;
+
+  /* ------------- Para Pantallas de más de 700px ------------- */
+@media only screen and (min-width: 700px) {
+    .form-header {
+      padding: 50px;
+    }
+  
+    .form-row {
+      flex-direction: row;
+      align-items: flex-start;
+      margin-bottom: 20px;
+    }
+    .form-row input[type="text"] {
+      width: 250px;
+      height: initial;
+    }
+    .form-row label {
+      text-align: right;
+      width: 120px;
+      margin-top: 7px;
+      padding-right: 20px;
+    }
+  }
+
+/* HAMBURGUESA */
+
+    .abrir_menu,
+    .cerrar_menu{
+        display: block;
+        border: 0;
+        font-size: 1.2rem;
+        background-color: transparent;
+        cursor: pointer;
+    }
+
+    .abrir_menu{
+        color: white;
+    }
+
+    .cerrar_menu{
+        color: white;
+    }
+
+    .nav{
+        opacity: 0;
+        visibility: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        gap: 1rem;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgb(0, 1, 1);
+        padding: 2rem;
+        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
+        width: 100%;
+    }
+
+    .nav_visible{
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .nav li{
+        align-items: end;
+    }
+
+    #menu{
+        width: 100%;
+        flex-direction: column;
+        background-color: rgb(89, 94, 94);
+        padding: 0;
+        height: 100vh;
+    }
+
+    .nav li a{
+        color: antiquewhite;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 30px;
+    }
+
+    .hamburg{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+    }
+
+
+@media screen and (max-width: 768px){
+
+    .acerca-de{ 
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 80px; 
+        width: 100%;
+    }
+
+    .servicios{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding: 80px; 
+        width: 100%;
+    }
+    
+    .servicio1,
+    .servicio2,
+    .servicio3,
+    .servicio4 {
+        width: 48%; 
+        margin-bottom: 30px; 
+        text-align: justify;
+    }
+
+    #seccion-1{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 0px;
+        flex-basis: auto;
+    }
+
+    #seccion-2 h2{
+        display: flex;
+        justify-content: center;
+    }
+
+    #seccion-3{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 10px;
+        flex-basis: auto;
+    }
+
+    #seccion-3 img{
+        width: 200px;
+    }
+
+    .trabajos {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+    }
+    
+    .trabajos .carousel-item1,
+    .trabajos .carousel-item2,
+    .trabajos .carousel-item3 {
+        margin: 10px; 
+    }
